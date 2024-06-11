@@ -26,4 +26,11 @@
 	@each $weight, $value in $font-weights {
 		--fw-#{$weight}: #{$value};
 	}
+
+	/* Loop to declare line height variables */
+	@each $height-type, $height in $line-heights {
+		@each $size, $value in $height {
+			--lh-#{$height-type}-#{$size}: #{$value};
+		}
+	}
 }
