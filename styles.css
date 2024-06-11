@@ -112,6 +112,7 @@ textarea:not([rows]) {
   --lh-heading-lg: 43px;
   --lh-heading-md: 31px;
   --lh-body-md: 23px;
+  --lh-body-sm: 21px;
 }
 
 body {
@@ -133,5 +134,6 @@ section header {
 }
 section header h1 {
   font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
   color: var(--clr-neutral-gray);
 }/*# sourceMappingURL=styles.css.map */
