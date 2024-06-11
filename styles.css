@@ -1,0 +1,137 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove Default Spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.2;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/static/JetBrainsMono-Bold.ttf");
+}
+:root {
+  /* Loop to declare color variables */
+  --clr-primary-green: hsl(127, 100%, 82%);
+  --clr-primary-orange: hsl(13, 95%, 66%);
+  --clr-primary-red: hsl(0, 91%, 63%);
+  --clr-primary-yellow: hsl(42, 91%, 68%);
+  --clr-neutral-gray: hsl(251, 9%, 53%);
+  --clr-neutral-gray-dark: hsl(248, 10%, 15%);
+  --clr-neutral-gray-very-dark: hsl(248, 15%, 11%);
+  --clr-neutral-offwhite: hsl(252, 11%, 91%);
+  --clr-gradient-linear-gray: linear-gradient(hsl(248, 17%, 9%), hsl(255, 22%, 4%));
+  /* Loop to declare font family variables */
+  --ff-primary-jet-brains: 'JetBrains Mono', monospace;
+  /* Loop to declare font size variables */
+  --fs-heading-lg: 2rem;
+  --fs-heading-md: 1.5rem;
+  --fs-body-lg: 1.5rem;
+  --fs-body-md: 1.125rem;
+  --fs-body-sm: 1rem;
+  /* Loop to declare font weight variables */
+  --fw-bold: 700;
+  /* Loop to declare line height variables */
+  --lh-heading-lg: 43px;
+  --lh-heading-md: 31px;
+  --lh-body-md: 23px;
+}
+
+body {
+  background-image: var(--clr-gradient-linear-gray);
+  font-family: var(--ff-primary-jet-brains);
+  font-weight: var(--fw-bold);
+}
+body main {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  padding: 4rem 1rem;
+}
+section header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+section header h1 {
+  font-size: var(--fs-body-sm);
+  color: var(--clr-neutral-gray);
+}/*# sourceMappingURL=styles.css.map */

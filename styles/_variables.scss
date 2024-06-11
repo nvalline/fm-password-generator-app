@@ -12,6 +12,9 @@ $colors: (
 		'gray-dark': hsl(248, 10%, 15%),
 		'gray-very-dark': hsl(248, 15%, 11%),
 		'offwhite': hsl(252, 11%, 91%)
+	),
+	gradient: (
+		'linear-gray': linear-gradient(hsl(248, 17%, 9%), hsl(255, 22%, 4%))
 	)
 );
 
@@ -36,7 +39,9 @@ $font-sizes: (
 		md: 1.5rem
 	),
 	body: (
-		md: 1.125rem
+		lg: 1.5rem,
+		md: 1.125rem,
+		sm: 1rem
 	)
 );
 
