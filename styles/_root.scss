@@ -33,4 +33,11 @@
 			--lh-#{$height-type}-#{$size}: #{$value};
 		}
 	}
+
+	/* Loop to declare range values variables */
+	@each $info-type, $dir in $range-values {
+		@each $size, $value in $dir {
+			--rv-#{$info-type}-#{$size}: #{$value};
+		}
+	}
 }

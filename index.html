@@ -14,6 +14,8 @@
 		<title>Frontend Mentor | Password generator app</title>
 
 		<link rel="stylesheet" href="./styles.css" />
+
+		<script defer src="./scripts.js"></script>
 	</head>
 	<body>
 		<main>
@@ -21,6 +23,7 @@
 				<header>
 					<h1>Password Generator</h1>
 				</header>
+
 				<div class="outputWrapper">
 					<h2 id="password">P4$5W0rD!</h2>
 					<svg
@@ -36,18 +39,19 @@
 						/>
 					</svg>
 				</div>
+
 				<form>
-					<div>
+					<div class="sliderInfo">
 						<label for="slider">Character Length</label>
-						<p id="sliderValue">10</p>
+						<p id="sliderValue">0</p>
 					</div>
 					<input
 						type="range"
-						id="charLength"
+						id="passwordRange"
 						class=""
 						min="0"
 						max="20"
-						value="10"
+						value="0"
 					/>
 					<input type="checkbox" id="" name="upperCase" value="upperCase" />
 					<label for="upperCase">Include Uppercase Letters</label>
