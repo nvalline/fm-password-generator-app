@@ -1,0 +1,55 @@
+// ----- Colors -----
+
+$colors: (
+	primary: (
+		'green': hsl(127, 100%, 82%),
+		'orange': hsl(13, 95%, 66%),
+		'red': hsl(0, 91%, 63%),
+		'yellow': hsl(42, 91%, 68%)
+	),
+	neutral: (
+		'gray': hsl(251, 9%, 53%),
+		'gray-dark': hsl(248, 10%, 15%),
+		'gray-very-dark': hsl(248, 15%, 11%),
+		'offwhite': hsl(252, 11%, 91%)
+	)
+);
+
+// ----- Typography -----
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../assets/fonts/static/JetBrainsMono-Bold.ttf');
+}
+
+$font-families: (
+	primary: (
+		jet-brains: "'JetBrains Mono', monospace"
+	)
+);
+
+$font-sizes: (
+	heading: (
+		lg: 2rem,
+		md: 1.5rem
+	),
+	body: (
+		md: 1.125rem
+	)
+);
+
+$font-weights: (
+	bold: 700
+);
+
+$line-heights: (
+	heading: (
+		lg: 43px,
+		md: 31px
+	),
+	body: (
+		md: 23px
+	)
+);
