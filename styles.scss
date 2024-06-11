@@ -24,4 +24,32 @@ section {
 			color: var(--clr-neutral-gray);
 		}
 	}
+
+	.outputWrapper {
+		margin-bottom: 1rem;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--clr-neutral-gray-dark);
+
+		h2 {
+			font-size: var(--fs-heading-md);
+			line-height: var(--lh-heading-md);
+			color: var(--clr-neutral-offwhite);
+		}
+
+		svg {
+			height: 20px;
+			width: 17.5px;
+
+			&:hover {
+				cursor: pointer;
+
+				path {
+					fill: var(--clr-neutral-white);
+				}
+			}
+		}
+	}
 }
