@@ -107,6 +107,11 @@ section {
 				width: var(--rv-thumb-w);
 				background: var(--clr-neutral-offwhite);
 				border-radius: 50%;
+
+				&:hover {
+					background: var(--clr-neutral-gray-very-dark);
+					border: 2px solid var(--clr-primary-green);
+				}
 			}
 
 			&::-moz-range-thumb {
@@ -115,6 +120,11 @@ section {
 				height: var(--rv-thumb-h);
 				width: var(--rv-thumb-w);
 				background: var(--clr-neutral-offwhite);
+
+				&:hover {
+					background: var(--clr-neutral-gray-very-dark);
+					border: 2px solid var(--clr-primary-green);
+				}
 			}
 
 			&:focus {
