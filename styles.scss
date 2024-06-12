@@ -192,5 +192,48 @@ section {
 				}
 			}
 		}
+
+		.strengthWrapper {
+			padding: 0.875rem 1rem;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--clr-neutral-gray-very-dark);
+
+			h3 {
+				font-size: var(--fs-body-sm);
+				line-height: var(--lh-body-sm);
+				color: var(--clr-neutral-gray);
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: var(--fs-body-md);
+				line-height: var(--lh-body-md);
+				color: var(--clr-neutral-offwhite);
+				text-transform: uppercase;
+			}
+
+			.strengthRatings {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+
+				.ratings {
+					display: flex;
+					align-items: center;
+					gap: 0.5rem;
+
+					.rating {
+						display: inline-block;
+						height: 28px;
+						width: 10px;
+						outline: 2px solid var(--clr-neutral-offwhite);
+						outline-offset: -2px;
+					}
+				}
+			}
+		}
 	}
 }
