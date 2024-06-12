@@ -285,6 +285,7 @@ section form .checkboxes .checkbox .checkmark:hover {
   outline: 2px solid var(--clr-primary-green);
 }
 section form .strengthWrapper {
+  margin-bottom: 1rem;
   padding: 0.875rem 1rem;
   width: 100%;
   display: flex;
@@ -320,4 +321,28 @@ section form .strengthWrapper .strengthRatings .ratings .rating {
   width: 10px;
   outline: 2px solid var(--clr-neutral-offwhite);
   outline-offset: -2px;
+}
+section form button {
+  padding: 1.125rem 0;
+  width: 100%;
+  background-color: var(--clr-primary-green);
+  border: none;
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--clr-neutral-gray-dark);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+section form button span path {
+  transition: all 300ms ease-in-out;
+}
+section form button:hover, section form button:focus {
+  background-color: var(--clr-neutral-gray-dark);
+  outline: 2px solid var(--clr-primary-green);
+  outline-offset: -2px;
+  color: var(--clr-primary-green);
+}
+section form button:hover span path, section form button:focus span path {
+  fill: var(--clr-primary-green);
 }/*# sourceMappingURL=styles.css.map */

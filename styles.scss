@@ -194,6 +194,7 @@ section {
 		}
 
 		.strengthWrapper {
+			margin-bottom: 1rem;
 			padding: 0.875rem 1rem;
 			width: 100%;
 			display: flex;
@@ -232,6 +233,35 @@ section {
 						outline: 2px solid var(--clr-neutral-offwhite);
 						outline-offset: -2px;
 					}
+				}
+			}
+		}
+
+		button {
+			padding: 1.125rem 0;
+			width: 100%;
+			background-color: var(--clr-primary-green);
+			border: none;
+			font-size: var(--fs-body-sm);
+			line-height: var(--lh-body-sm);
+			color: var(--clr-neutral-gray-dark);
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: all 300ms ease-in-out;
+
+			span path {
+				transition: all 300ms ease-in-out;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: var(--clr-neutral-gray-dark);
+				outline: 2px solid var(--clr-primary-green);
+				outline-offset: -2px;
+				color: var(--clr-primary-green);
+
+				span path {
+					fill: var(--clr-primary-green);
 				}
 			}
 		}
