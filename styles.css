@@ -239,8 +239,10 @@ section form input[type=range]:focus::-moz-range-thumb {
   border: 2px solid var(--clr-primary-green);
   background: var(--clr-neutral-gray-very-dark);
 }
-section form .checkbox {
-  margin-bottom: 1rem;
+section form .checkboxes {
+  margin-bottom: 2rem;
+}
+section form .checkboxes .checkbox {
   padding-left: 2.5rem;
   display: block;
   position: relative;
@@ -251,18 +253,21 @@ section form .checkbox {
      -moz-user-select: none;
           user-select: none;
 }
-section form .checkbox input {
+section form .checkboxes .checkbox:not(:last-child) {
+  margin-bottom: 1rem;
+}
+section form .checkboxes .checkbox input {
   height: 0;
   width: 0;
 }
-section form .checkbox input:checked ~ .checkmark {
+section form .checkboxes .checkbox input:checked ~ .checkmark {
   background-color: var(--clr-primary-green);
   outline: 2px solid var(--clr-primary-green);
   background-image: url("./assets/images/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-section form .checkbox .checkmark {
+section form .checkboxes .checkbox .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -273,9 +278,9 @@ section form .checkbox .checkmark {
   outline-offset: -2px;
   cursor: pointer;
 }
-section form .checkbox .checkmark::after {
+section form .checkboxes .checkbox .checkmark::after {
   content: "";
 }
-section form .checkbox .checkmark:hover {
+section form .checkboxes .checkbox .checkmark:hover {
   outline: 2px solid var(--clr-primary-green);
 }/*# sourceMappingURL=styles.css.map */
