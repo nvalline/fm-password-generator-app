@@ -112,6 +112,7 @@ textarea:not([rows]) {
   /* Loop to declare line height variables */
   --lh-heading-lg: 43px;
   --lh-heading-md: 32px;
+  --lh-body-lg: 32px;
   --lh-body-md: 23px;
   --lh-body-sm: 21px;
   /* Loop to declare range values variables */
@@ -139,10 +140,21 @@ section header {
   margin-bottom: 1rem;
   text-align: center;
 }
+@media (min-width: 48em) {
+  section header {
+    margin-bottom: 2rem;
+  }
+}
 section header h1 {
   font-size: var(--fs-body-sm);
   line-height: var(--lh-body-sm);
   color: var(--clr-neutral-gray);
+}
+@media (min-width: 48em) {
+  section header h1 {
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body-lg);
+  }
 }
 section form,
 section .outputWrapper {
@@ -155,14 +167,36 @@ section .outputWrapper {
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 48em) {
+  section .outputWrapper {
+    margin-bottom: 1.5rem;
+    padding: 1.1875rem 1.75rem 1.1875rem 2rem;
+  }
+}
 section .outputWrapper h2 {
   font-size: var(--fs-heading-md);
   line-height: var(--lh-heading-md);
   color: var(--clr-neutral-offwhite);
 }
+@media (min-width: 48em) {
+  section .outputWrapper h2 {
+    font-size: var(--fs-heading-lg);
+    line-height: var(--lh-heading-lg);
+  }
+}
 section .outputWrapper svg {
   height: 20px;
   width: 17.5px;
+}
+@media (min-width: 48em) {
+  section .outputWrapper svg {
+    height: 24px;
+    width: 21px;
+  }
+}
+section .outputWrapper svg path {
+  fill: var(--clr-primary-green);
+  transition: all 300ms ease-in-out;
 }
 section .outputWrapper svg:hover {
   cursor: pointer;
@@ -173,24 +207,46 @@ section .outputWrapper svg:hover path {
 section form {
   width: 100%;
 }
+@media (min-width: 48em) {
+  section form {
+    padding: 1.5rem 2rem 2rem;
+  }
+}
 section form .sliderInfo {
   margin-bottom: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (min-width: 48em) {
+  section form .sliderInfo {
+    margin-bottom: 1.625rem;
+  }
+}
 section form .sliderInfo label {
   font-size: var(--fs-body-sm);
   line-height: var(--lh-body-sm);
   color: var(--clr-neutral-offwhite);
+}
+@media (min-width: 48em) {
+  section form .sliderInfo label {
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+  }
 }
 section form .sliderInfo p {
   font-size: var(--fs-heading-md);
   line-height: var(--lh-heading-md);
   color: var(--clr-primary-green);
 }
+@media (min-width: 48em) {
+  section form .sliderInfo p {
+    font-size: var(--fs-heading-lg);
+    line-height: var(--lh-heading-lg);
+  }
+}
 section form input[type=range] {
-  margin-bottom: 2rem;
+  margin-bottom: 2.625rem;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -253,8 +309,20 @@ section form .checkboxes .checkbox {
      -moz-user-select: none;
           user-select: none;
 }
+@media (min-width: 48em) {
+  section form .checkboxes .checkbox {
+    padding-left: 2.8125rem;
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+  }
+}
 section form .checkboxes .checkbox:not(:last-child) {
   margin-bottom: 1rem;
+}
+@media (min-width: 48em) {
+  section form .checkboxes .checkbox:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
 }
 section form .checkboxes .checkbox input {
   height: 0;
@@ -293,17 +361,35 @@ section form .strengthWrapper {
   justify-content: space-between;
   background-color: var(--clr-neutral-gray-very-dark);
 }
+@media (min-width: 48em) {
+  section form .strengthWrapper {
+    margin-bottom: 2rem;
+    padding: 1.25rem 2rem;
+  }
+}
 section form .strengthWrapper h3 {
   font-size: var(--fs-body-sm);
   line-height: var(--lh-body-sm);
   color: var(--clr-neutral-gray);
   text-transform: uppercase;
 }
+@media (min-width: 48em) {
+  section form .strengthWrapper h3 {
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+  }
+}
 section form .strengthWrapper p {
   font-size: var(--fs-body-md);
   line-height: var(--lh-body-md);
   color: var(--clr-neutral-offwhite);
   text-transform: uppercase;
+}
+@media (min-width: 48em) {
+  section form .strengthWrapper p {
+    font-size: var(--fs-heading-md);
+    line-height: var(--lh-heading-md);
+  }
 }
 section form .strengthWrapper .strengthRatings {
   display: flex;
@@ -333,6 +419,16 @@ section form button {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+}
+@media (min-width: 48em) {
+  section form button {
+    padding: 1.3125rem 0;
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+  }
+  section form button span {
+    margin-left: 0.875rem;
+  }
 }
 section form button span path {
   transition: all 300ms ease-in-out;
