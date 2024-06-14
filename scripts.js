@@ -22,7 +22,8 @@ formEl.addEventListener('input', (e) => {
 	let entriesLength = Object.keys(entries).length;
 
 	if (entries.slider < 1) {
-		window.alert('Password Character Length cannot be 0.');
+		//! Add toast
+		console.log('Password Character Length cannot be 0.');
 	} else if (entries.slider > 0 && entriesLength <= 2) {
 		ratingTextEL.innerHTML = 'Too Weak!';
 		ratingWrapper.classList = 'ratings tooWeak';
