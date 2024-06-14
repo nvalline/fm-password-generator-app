@@ -95,6 +95,7 @@ textarea:not([rows]) {
   --clr-primary-yellow: hsl(42, 91%, 68%);
   --clr-neutral-gray: hsl(251, 9%, 53%);
   --clr-neutral-gray-dark: hsl(248, 10%, 15%);
+  --clr-neutral-gray-disabled: hsl(253, 5%, 34%);
   --clr-neutral-gray-very-dark: hsl(248, 15%, 11%);
   --clr-neutral-offwhite: hsl(252, 11%, 91%);
   --clr-neutral-white: hsl(0, 100%, 100%);
@@ -176,7 +177,7 @@ section .outputWrapper {
 section .outputWrapper h2 {
   font-size: var(--fs-heading-md);
   line-height: var(--lh-heading-md);
-  color: var(--clr-neutral-offwhite);
+  color: var(--clr-neutral-gray-disabled);
 }
 @media (min-width: 48em) {
   section .outputWrapper h2 {
@@ -184,24 +185,41 @@ section .outputWrapper h2 {
     line-height: var(--lh-heading-lg);
   }
 }
-section .outputWrapper svg {
+section .outputWrapper .copiedWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+section .outputWrapper .copiedWrapper p {
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body-sm);
+  color: var(--clr-primary-green);
+  text-transform: uppercase;
+}
+@media (min-width: 48em) {
+  section .outputWrapper .copiedWrapper p {
+    font-size: var(--fs-body-md);
+    line-height: var(--lh-body-md);
+  }
+}
+section .outputWrapper .copiedWrapper svg {
   height: 20px;
   width: 17.5px;
 }
 @media (min-width: 48em) {
-  section .outputWrapper svg {
+  section .outputWrapper .copiedWrapper svg {
     height: 24px;
     width: 21px;
   }
 }
-section .outputWrapper svg path {
+section .outputWrapper .copiedWrapper svg path {
   fill: var(--clr-primary-green);
   transition: all 300ms ease-in-out;
 }
-section .outputWrapper svg:hover {
+section .outputWrapper .copiedWrapper svg:hover {
   cursor: pointer;
 }
-section .outputWrapper svg:hover path {
+section .outputWrapper .copiedWrapper svg:hover path {
   fill: var(--clr-neutral-white);
 }
 section form {
@@ -407,6 +425,23 @@ section form .strengthWrapper .strengthRatings .ratings .rating {
   width: 10px;
   outline: 2px solid var(--clr-neutral-offwhite);
   outline-offset: -2px;
+}
+section form .strengthWrapper .strengthRatings .tooWeak .rating:first-child {
+  background-color: var(--clr-primary-red);
+  outline: none;
+}
+section form .strengthWrapper .strengthRatings .weak .rating:first-child,
+section form .strengthWrapper .strengthRatings .weak .rating:nth-child(2) {
+  background-color: var(--clr-primary-orange);
+  outline: none;
+}
+section form .strengthWrapper .strengthRatings .medium .rating:not(:last-child) {
+  background-color: var(--clr-primary-yellow);
+  outline: none;
+}
+section form .strengthWrapper .strengthRatings .strong .rating {
+  background-color: var(--clr-primary-green);
+  outline: none;
 }
 section form button {
   padding: 1.125rem 0;

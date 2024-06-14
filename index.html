@@ -26,21 +26,24 @@
 
 				<div class="outputWrapper">
 					<h2 id="password">P4$5W0rD!</h2>
-					<svg
-						id="copyPasswordIcon"
-						width="21"
-						height="24"
-						viewbox="0 0 21 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
-							fill="#A4FFAF"
-						/>
-					</svg>
+					<div class="copiedWrapper">
+						<p id="copiedText"></p>
+						<svg
+							id="copyPasswordIcon"
+							width="21"
+							height="24"
+							viewbox="0 0 21 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+								fill="#A4FFAF"
+							/>
+						</svg>
+					</div>
 				</div>
 
-				<form>
+				<form id="form" action="">
 					<div class="sliderInfo">
 						<label for="slider">Character Length</label>
 						<p id="sliderValue">0</p>
@@ -48,6 +51,7 @@
 					<input
 						type="range"
 						id="passwordRange"
+						name="slider"
 						class=""
 						min="0"
 						max="20"
@@ -56,30 +60,50 @@
 					<div class="checkboxes">
 						<label class="checkbox">
 							Include Uppercase Letters
-							<input type="checkbox" id="" name="upperCase" value="upperCase" />
+							<input
+								type="checkbox"
+								id="upperCase"
+								name="upperCase"
+								value="checked"
+							/>
 							<span class="checkmark"></span>
 						</label>
 						<label class="checkbox">
 							Include Lowercase Letters
-							<input type="checkbox" id="" name="lowerCase" value="lowerCase" />
+							<input
+								type="checkbox"
+								id="lowerCase"
+								name="lowerCase"
+								value="checked"
+							/>
 							<span class="checkmark"></span>
 						</label>
 						<label class="checkbox">
 							Include Numbers
-							<input type="checkbox" id="" name="numbers" value="numbers" />
+							<input
+								type="checkbox"
+								id="numbers"
+								name="numbers"
+								value="checked"
+							/>
 							<span class="checkmark"></span>
 						</label>
 						<label class="checkbox">
 							Include Symbols
-							<input type="checkbox" id="" name="symbols" value="symbols" />
+							<input
+								type="checkbox"
+								id="symbols"
+								name="symbols"
+								value="checked"
+							/>
 							<span class="checkmark"></span>
 						</label>
 					</div>
 					<div class="strengthWrapper">
 						<h3>Strength</h3>
 						<div class="strengthRatings">
-							<p>Medium</p>
-							<div class="ratings">
+							<p id="ratingText"></p>
+							<div id="ratings" class="ratings">
 								<span class="rating"></span>
 								<span class="rating"></span>
 								<span class="rating"></span>
