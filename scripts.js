@@ -1,3 +1,5 @@
+const copiedTextEl = document.getElementById('copiedText');
+const copyIconEl = document.getElementById('copyPasswordIcon');
 const formEl = document.getElementById('form');
 const passwordEl = document.getElementById('password');
 const passwordRangeEl = document.getElementById('passwordRange');
@@ -121,4 +123,17 @@ formEl.addEventListener('submit', (e) => {
 	const randomString = createRandomString(length, chars);
 
 	displayPassword(randomString);
+});
+
+// Copy new password to clipboard
+copyIconEl.addEventListener('click', (e) => {
+	const newPassword = passwordEl.textContent;
+
+	navigator.clipboard.writeText(newPassword);
+
+	copiedTextEl.innerHTML = 'Copied';
+
+	setTimeout(() => {
+		copiedTextEl.innerHTML = '';
+	}, 3000);
 });
