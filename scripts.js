@@ -5,6 +5,7 @@ const ratingWrapper = document.getElementById('ratings');
 const ratingTextEL = document.getElementById('ratingText');
 const sliderToastEl = document.getElementById('sliderToast');
 const sliderValueEl = document.getElementById('sliderValue');
+const submitBtnEl = document.getElementById('submitBtn');
 
 // Style slider progress
 passwordRangeEl.addEventListener('input', (event) => {
@@ -19,10 +20,12 @@ passwordRangeEl.addEventListener('input', (event) => {
 // Handle slide toast
 const hideSliderToast = () => {
 	sliderToastEl.className = 'toastHidden';
+	submitBtnEl.disabled = false;
 };
 
 const showSliderToast = () => {
 	sliderToastEl.className = 'toastActive';
+	submitBtnEl.disabled = true;
 };
 
 // Get form data to set Password Strength
@@ -50,4 +53,10 @@ formEl.addEventListener('input', (e) => {
 		ratingTextEL.innerHTML = 'Strong';
 		ratingWrapper.classList = 'ratings strong';
 	}
+});
+
+// Get form data for password output
+formEl.addEventListener('submit', (e) => {
+	e.preventDefault();
+	console.log('SUBMIT');
 });
