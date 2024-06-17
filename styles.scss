@@ -16,6 +16,10 @@ section {
 	margin: 0 auto;
 	max-width: 540px;
 
+	@media (min-width: 48rem) {
+		padding: 8.3125rem 1rem 4rem;
+	}
+
 	header {
 		margin-bottom: 1rem;
 		text-align: center;
