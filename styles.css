@@ -108,6 +108,7 @@ textarea:not([rows]) {
   --fs-body-lg: 1.5rem;
   --fs-body-md: 1.125rem;
   --fs-body-sm: 1rem;
+  --fs-body-xs: 0.75rem;
   /* Loop to declare font weight variables */
   --fw-bold: 700;
   /* Loop to declare line height variables */
@@ -116,6 +117,7 @@ textarea:not([rows]) {
   --lh-body-lg: 32px;
   --lh-body-md: 23px;
   --lh-body-sm: 21px;
+  --lh-body-xs: 16px;
   /* Loop to declare range values variables */
   --rv-track-h: 8px;
   --rv-thumb-h: 28px;
@@ -241,16 +243,29 @@ section form .sliderInfo {
     margin-bottom: 1.625rem;
   }
 }
-section form .sliderInfo label {
+section form .sliderInfo .sliderLabelWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+section form .sliderInfo .sliderLabelWrapper label {
   font-size: var(--fs-body-sm);
   line-height: var(--lh-body-sm);
   color: var(--clr-neutral-offwhite);
 }
 @media (min-width: 48em) {
-  section form .sliderInfo label {
+  section form .sliderInfo .sliderLabelWrapper label {
     font-size: var(--fs-body-md);
     line-height: var(--lh-body-md);
   }
+}
+section form .sliderInfo .sliderLabelWrapper .toastActive {
+  font-size: var(--fs-body-xs);
+  line-height: var(--lh-body-xs);
+  color: var(--clr-primary-red);
+}
+section form .sliderInfo .sliderLabelWrapper .toastHidden {
+  display: none;
 }
 section form .sliderInfo p {
   font-size: var(--fs-heading-md);

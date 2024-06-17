@@ -123,14 +123,30 @@ section {
 				margin-bottom: 1.625rem;
 			}
 
-			label {
-				font-size: var(--fs-body-sm);
-				line-height: var(--lh-body-sm);
-				color: var(--clr-neutral-offwhite);
+			.sliderLabelWrapper {
+				display: flex;
+				align-items: flex-end;
+				gap: 1rem;
 
-				@media (min-width: 48em) {
-					font-size: var(--fs-body-md);
-					line-height: var(--lh-body-md);
+				label {
+					font-size: var(--fs-body-sm);
+					line-height: var(--lh-body-sm);
+					color: var(--clr-neutral-offwhite);
+
+					@media (min-width: 48em) {
+						font-size: var(--fs-body-md);
+						line-height: var(--lh-body-md);
+					}
+				}
+
+				.toastActive {
+					font-size: var(--fs-body-xs);
+					line-height: var(--lh-body-xs);
+					color: var(--clr-primary-red);
+				}
+
+				.toastHidden {
+					display: none;
 				}
 			}
 
